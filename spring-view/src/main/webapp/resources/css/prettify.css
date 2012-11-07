@@ -76,10 +76,12 @@
 	padding-right: 15px;
 	background-color: #F4C68D;
 	margin-left: 30px;
-	max-width: 550px;
+	max-width: 630px;
 	border-radius: 10px;
 	padding: 10px;
-	display:inline-block;	
+	display:inline-block;
+	word-wrap: break-word;
+	white-space: pre-wrap;
 }
 
 ol.linenums {

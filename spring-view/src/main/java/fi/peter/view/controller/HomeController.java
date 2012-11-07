@@ -28,7 +28,7 @@ public class HomeController {
 	
 	@RequestMapping("/projects")
 	public String projects() {
-		return "projects";
+		return "javaconf";
 	}
 	
 	@RequestMapping("/projects-nav")

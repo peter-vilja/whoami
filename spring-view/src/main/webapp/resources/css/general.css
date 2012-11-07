@@ -5,8 +5,8 @@ body {
 	color: #3C3C3C;
 }
 
-header #top {
-	height: 70px;
+header nav {
+	height: 46px;
 	width: 100%;
 	background-color: saddleBrown;
 	margin: 0 auto;
@@ -54,9 +54,6 @@ div[role="main"] {
 	#bottomleft {
 		padding-left: 40px !important;
 	}
-	.bottom-header-left {
-		background-position: 250px 13px !important;
-	}
 	#right {
 		border-radius: 15px !important;
 	}
@@ -72,9 +69,6 @@ div[role="main"] {
 	#bottomleft {
 		padding-left: 10px !important;
 	}
-	.bottom-header-left {
-		background-position: 225px 13px !important;
-	}
 }
 
 @media screen and (max-width: 785px) {
@@ -84,17 +78,11 @@ div[role="main"] {
 	#bottomright {
 		display: none;
 	}
-	.bottom-header-left {
-		background-position: 330px 13px !important;
-	}
 }
 
 @media screen and (max-width: 634px) {
 	#bottomleft {
 		padding-left: 10px !important;
-	}
-	.bottom-header-left {
-		background-position: 225px 13px !important;
 	}
 }
 
@@ -105,21 +93,15 @@ div[role="main"] {
 	#bottomleft {
 		padding-left: 150px !important;
 	}
-	.bottom-header-left {
-		background-position: 360px 13px !important;
-	}
 }
 
 @media screen and (max-width: 400px) {
 	#bottomleft {
 		padding-left: 30px !important;
 	}
-	.bottom-header-left {
-		background-position: 240px 13px !important;
-	}
 }
 
-#right,#left,#lefttopback,pre {
+#right,#left,#lefttopback,#leftbottomback,pre {
 	background-image: -webkit-linear-gradient(135deg, rgba(255, 255, 255, .2)
 		25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%,
 		rgba(255, 255, 255, .2) 80%, transparent 75%, transparent );
@@ -146,7 +128,7 @@ div[role="main"] {
 	max-width: 700px;
 	min-width: 700px;
 	float: right;
-	border-radius: 15px 15px 15px 0;
+	border-radius: 15px 15px 15px 15px;
 }
 
 #leftcontainer {
@@ -155,13 +137,21 @@ div[role="main"] {
 	padding-left: 20px;
 }
 
-#right p,#left p {
+#right p {
+	font-family: "Trebuchet MS", "Helvetica Neue", Helvetica, Arial,
+		sans-serif;
+}
+
+#right p {
 	padding-left: 15px;
 	padding-right: 15px;
 	padding-top: 10px;
-	font-family: "Trebuchet MS", "Helvetica Neue", Helvetica, Arial,
-		sans-serif;
 	font-size: small;
+}
+
+#left p {
+	margin:0;
+	text-align:right;
 }
 
 #left {
@@ -179,6 +169,15 @@ div[role="main"] {
 	padding-right: 10px;
 }
 
+#leftbottomback {
+	width: 30px;
+	height: 15px;
+	margin-left: 150px;
+	z-index: -5;
+	position: absolute;
+	margin-top: -30px;
+}
+
 #lefttop {
 	min-height: 60px;
 	border-radius: 15px;
@@ -187,7 +186,13 @@ div[role="main"] {
 	padding-right: 12px;
 }
 
-.page {
+#leftbottom {
+	min-height: 30px;
+	border-radius: 15px;
+	background-image: url('../images/background-grey.png');
+}
+
+.developer {
 	margin: 0;
 	text-align: center;
 	letter-spacing: 2px;
@@ -230,12 +235,6 @@ footer #bottomcontainer {
 	font-size: 12pt !important;
 }
 
-.bottom-header-right {
-	background-image: url('../images/glyphicons_340_globe.png');
-	background-repeat: no-repeat;
-	background-position: 90px 13px;
-}
-
 .bottom-right-image {
 	background-repeat: no-repeat;
 	width: 24px;
@@ -244,47 +243,12 @@ footer #bottomcontainer {
 	border-radius: 4px;
 }
 
-.bottom-right-in {
-	background-image: url("../images/glyphicons_377_linked_in.png");
-}
-
-.bottom-right-g {
-	background-image: url("../images/glyphicons_362_google+_alt.png");
-}
-
-.bottom-right-fb {
-	background-image: url("../images/glyphicons_390_facebook.png");
-}
-
-.bottom-right-sky {
-	background-image: url("../images/glyphicons_398_skype.png");
-}
-
-.bottom-header-left {
-	background-image: url('../images/glyphicons_009_magic.png');
-	background-repeat: no-repeat;
-	background-position: 285px 13px;
-}
-
 #bottomleft {
 	padding-left: 75px;
 }
 
-.bottom-left-email {
-	background-image: url("../images/glyphicons_399_e-mail.png");
-	background-repeat: no-repeat;
-	height: 24px;
-	width: 24px;
-	border-radius: 20px;
-	display: inline-block;
-}
-
 #bottomcenter {
 	padding-left: 10px;
-}
-
-#bottomleft table tr td:nth-child(1) {
-	width: 50px;
 }
 
 #bottompicture {
@@ -295,25 +259,6 @@ footer #bottomcontainer {
 	background-image: url("../images/pictureofme.png");
 	background-repeat: no-repeat;
 	border-radius: 10px;
-}
-
-@font-face {
-	font-family: 'WebSymbolsRegular';
-	src: url('../fonts/websymbols-regular-webfont.eot');
-	src: url('../fonts/websymbols-regular-webfont.eot?#iefix')
-		format('embedded-opentype'),
-		url('../fonts/websymbols-regular-webfont.woff') format('woff'),
-		url('../fonts/websymbols-regular-webfont.ttf') format('truetype'),
-		url('../fonts/websymbols-regular-webfont.svg#WebSymbolsRegular')
-		format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-
-.icon {
-	font-family: 'WebSymbolsRegular';
-	font-size: 20px;
-	color: white;
 }
 
 nav ul.outer {
@@ -330,61 +275,31 @@ li.horizontal {
 	width: 140px;
 }
 
-nav li.vertical-wrapper {
-	width: 23% !important;
-}
-
-nav li.vertical {
-	width:100%;
-	border-bottom-color: rgba(255, 255, 255, 0.6);
-	border-bottom-style: solid;
-	border-bottom-width: 1px;
-	text-align: center;
-}
-
-nav li.vertical em {
-	padding-top: 10px;
-	display: inline-block;
-}
-
-.nav-right {
-	border-right-color: rgba(255, 255, 255, 0.6);
-	border-right-style: solid;
-	border-right-width: 1px;
-}
-
 .nav {
-	height: 70px;
+	height: 46px;
 	color: black;
 	cursor: pointer;
-	background-color: white;
+	background-color: lightgrey;
 	opacity: 0.65;
-	filter: alpha(opacity =   65);
+	filter: alpha(opacity = 65);
 	box-shadow: 0 1px 20px rgba(0, 0, 0, 0.3) inset;
 	-moz-box-shadow: 0 1px 20px rgba(0, 0, 0, 0.3) inset;
 	-webkit-box-shadow: 0 1px 20px rgba(0, 0, 0, 0.3) inset;
 	text-align: center;
 	font-weight: bold;
-	font-size: 11px;
+	font-size: 12px;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
-nav div span {
-	margin-left: 20px;
-}
-
-.nav-small {
-	height: 35px;
-	color: white;
-	cursor:pointer;
-	background-color: black;
-	opacity: 0.65;
-	filter: alpha(opacity =   65);
-	box-shadow: 0 1px 20px rgba(0, 0, 0, 0.3) inset;
-	-moz-box-shadow: 0 1px 20px rgba(0, 0, 0, 0.3) inset;
-	-webkit-box-shadow: 0 1px 20px rgba(0, 0, 0, 0.3) inset;
-	text-align: center;
-	font-weight: bold;
-	font-size: 11px;
+nav .icon {
+	font-size: 25px;
+	position: relative;
+	top: 5px;
 }
 
 .nav:hover,.nav-selected {
@@ -396,27 +311,12 @@ nav div span {
 	-webkit-box-shadow: 0 1px 20px rgba(0, 0, 0, 0.3) inset;
 }
 
-.spring-contact-img {
-	background-image: url("../images/glyphicons_352_nameplate.png");
-	background-repeat: no-repeat;
-	width: 24px;
-	height: 21px;
-}
-
 .nav-inner {
 	background-repeat: no-repeat;
 	width: 35px;
 	height: 25px;
-	margin: auto;
-	margin-top: 14px;
-}
-
-.nav-project-img {
-	background-image: url("../images/glyphicons_280_settings.png");
-}
-
-.nav-other-img {
-	background-image: url("../images/glyphicons_144_folder_open.png");
+	margin-left: 20px;
+	margin-top: 10px;
 }
 
 .sub-nav {
@@ -426,4 +326,23 @@ nav div span {
 	background-color: white;
 	margin-top: 15px;
 	margin-left: 25px;
+	cursor: pointer;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.sub-nav-bottom {
+	margin-top: 30px;
+}
+
+.sub-nav-first {
+	font-size: 15px;
+}
+
+.sub-nav-second {
+	font-size: 40px;
 }

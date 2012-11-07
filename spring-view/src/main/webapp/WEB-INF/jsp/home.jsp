@@ -26,6 +26,8 @@
 
 <link href="<spring:url value="/resources/css/main.css" />"
 	rel="stylesheet" type="text/css" />
+<link href="<spring:url value="/resources/css/icons.css" />"
+	rel="stylesheet" type="text/css" />
 
 <!-- All JavaScript at the bottom, except this Modernizr build.
        Modernizr enables HTML5 elements & feature detects for optimal performance.
@@ -38,20 +40,18 @@
        chromium.org/developers/how-tos/chrome-frame-getting-started -->
 	<!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
 	<header>
-		<div id="top">
 			<nav>
 				<ul class="outer">
 					<li id="projects" class="nav nav-selected horizontal">
-						<div class="nav-inner nav-project-img"></div> 
-						<em><spring:message code="nav.projects" /></em>
+						<span aria-hidden="true" class="icon-wrench icon"></span>
+						<span><spring:message code="nav.projects" /></span>
 					</li>
 					<li id="others" class="nav horizontal">
-						<div class="nav-inner nav-other-img"></div>
-						<dfn><spring:message code="nav.other" /></dfn>
+						<span aria-hidden="true" class="icon-clipboard icon"></span>
+						<span><spring:message code="nav.other" /></span>
 					</li>
 				</ul>
 			</nav>
-		</div>
 	</header>
 
 	<div role="main">
@@ -60,7 +60,7 @@
 		</div>
 		<div id="leftcontainer">
 			<div id="lefttop">
-				<p class="page">SOFTWARE DEVELOPER</p>
+				<p class="developer">SOFTWARE DEVELOPER</p>
 				<p class="name">PETER VILJA</p>
 			</div>
 			<div id="lefttopback"></div>
@@ -68,23 +68,22 @@
 				<div id="sub-nav">
 				</div>
 			</div>
+			<div id="leftbottom">
+			</div>
+			<div id="leftbottomback">
+			</div>
 		</div>
 	</div>
 
 	<footer>
 		<div id="bottomcontainer">
-			<div id="bottomleft" class="bottom-header-left">
-				<p class="bottomheader">LOOKING FOR A DEVELOPER?</p>
+			<div id="bottomleft">
+				<p aria-hidden="true" class="bottomheader diamond-after">LOOKING FOR A DEVELOPER? </p>
 				<p>Got interested? Contact me:</p>
 				<table>
 					<tr>
-						<td><div class="spring-contact-img"></div></td>
-						<td>peter.vilja <span class="bottom-left-email"></span> Gmail
-						</td>
-					</tr>
-					<tr>
-						<td></td>
-						<td>+35840 1349449</td>
+						<td class="icon-mail big-icon"></td>
+						<td class="icon-mobile big-icon"></td>
 					</tr>
 				</table>
 			</div>
@@ -92,15 +91,15 @@
 				<div id="bottompicture"></div>
 			</div>
 			<div id="bottomright" class="bottom-header-right">
-				<p class="bottomheader">ELSEWHERE</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-					Integer in tortor sit amet sapien commodo hendreri. Phasellus
-					vulputate tempor volutpat. Maecenas quam nisl, sodales et laoreet
-					in, hendrerit eget dui.</p>
-				<div class="bottom-right-image bottom-right-in"></div>
-				<div class="bottom-right-image bottom-right-g"></div>
-				<div class="bottom-right-image bottom-right-fb"></div>
-				<div class="bottom-right-image bottom-right-sky"></div>
+				<p class="bottomheader broadcast-after">ELSEWHERE </p>
+				<p>Get inspired and inspire others. Check out my projects from GitHub. Want to know me better?</p>
+				<span class="icon-github big-icon"></span>
+				<span class="icon-linkedin big-icon"></span>
+				<span class="icon-google-plus big-icon"></span>
+				<span class="icon-facebook big-icon"></span>
+				<br/>
+				<span class="icon-html5 bigger-icon"></span>
+				<span class="icon-css3 bigger-icon"></span>
 			</div>
 		</div>
 	</footer>
